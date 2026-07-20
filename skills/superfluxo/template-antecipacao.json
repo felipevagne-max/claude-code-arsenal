@@ -1,0 +1,441 @@
+{
+  "status": "draft",
+  "sendType": "recurring",
+  "name": "{{FLOW_NAME}}",
+  "templateId": "",
+  "firstStepType": "node",
+  "bodyParameters": [],
+  "urlButtonParameters": [],
+  "headerParameters": [],
+  "audit": {
+    "userId": "",
+    "userEmail": "{{USER_EMAIL}}"
+  },
+  "sendAt": 1771534800000,
+  "recurrenceInterval": "daily",
+  "recurrenceDaysOfWeek": [],
+  "recurrenceExcludedDates": [],
+  "recurrenceMonthlyDays": [],
+  "recurrenceDailyInterval": 1,
+  "automation": {
+    "name": "{{FLOW_NAME}}",
+    "category": "automation",
+    "status": "idle",
+    "connectionType": "whatsapp",
+    "node": {
+      "triggers": [
+        {
+          "interaction": "broadcast"
+        }
+      ],
+      "type": {
+        "id": "jyt2U0yvvwf1yhLcaohA",
+        "icon": "init",
+        "tag": "init",
+        "color": "transparent"
+      },
+      "pos": "{\"x\":0,\"y\":0}",
+      "id": "VNbsef6491tJEM7RfdHw",
+      "sonId": "t1CWLWmpzz46yR2N3ULp",
+      "nodes": [
+        {
+          "pos": "{\"x\":5050.916272428387,\"y\":220.90507470282876}",
+          "type": { "tag": "action", "color": "transparent", "id": "action", "icon": "" },
+          "sonId": "VyvXVkDMObvo3uexhDIB",
+          "action": {
+            "type": "remove_tag",
+            "userResourceGroupSendRandomic": false,
+            "keepChatActive": false,
+            "unniiaAtributionOnly": false,
+            "forceAttribution": false,
+            "tags": ["{{FLOW_TAG}}"]
+          },
+          "id": "0rHsLbeLdIhawXjCycbr"
+        },
+        {
+          "pos": "{\"x\":1970.8251921470835,\"y\":-161.7113576561674}",
+          "type": { "icon": "", "id": "delay", "tag": "delay", "color": "transparent" },
+          "sonId": "D4UkNQu7bcp25WVg0z2I",
+          "delay": {
+            "isComercialInterval": false,
+            "sendMessagesIntervalRangeType": "minutes",
+            "time": {{DELAY_3}},
+            "sendMessagesIntervalRange": [10, 201],
+            "type": "minutes"
+          },
+          "id": "3230WLODNyNZgUbHN1c8"
+        },
+        {
+          "pos": "{\"x\":1284.9969217638884,\"y\":81.73062648832831}",
+          "type": { "color": "transparent", "tag": "delay", "icon": "", "id": "delay" },
+          "sonId": "qF3uI6NMkstr3cNazD5T",
+          "delay": {
+            "sendMessagesIntervalRangeType": "minutes",
+            "isComercialInterval": false,
+            "sendMessagesIntervalRange": [10, 201],
+            "type": "minutes",
+            "time": {{DELAY_2}}
+          },
+          "id": "4GtujYT0JpOkscqBRqRv"
+        },
+        {
+          "sonId": "f83TiPHy2cffwewn2ibp",
+          "pos": "{\"x\":965.2738317136541,\"y\":-221.79261674721144}",
+          "type": { "icon": "", "id": "message", "color": "transparent", "tag": "message" },
+          "message": {
+            "messageType": "message-media",
+            "type": "send_message",
+            "file": {
+              "caption": "",
+              "uploadedFile": {
+                "size": 0,
+                "contentType": "video/mp4",
+                "name": "{{VIDEO_1_NAME}}",
+                "url": "{{VIDEO_1_URL}}",
+                "extension": "mp4"
+              },
+              "originalName": "{{VIDEO_1_NAME}}",
+              "mimeType": "video/mp4"
+            }
+          },
+          "sequential": true,
+          "id": "BXhgwH5eKDDrjgKax38J"
+        },
+        {
+          "pos": "{\"x\":2321.9482237624684,\"y\":-232.7719711973764}",
+          "type": { "color": "transparent", "tag": "message", "icon": "", "id": "message" },
+          "sonId": "fNz7ziYjKonLTVCuXFWb",
+          "id": "D4UkNQu7bcp25WVg0z2I",
+          "message": {
+            "messageType": "message-text",
+            "type": "send_message",
+            "message": "{{MSG_15MIN}}"
+          }
+        },
+        {
+          "id": "EDZutGorerkmenEYquDv",
+          "delay": {
+            "type": "minutes",
+            "sendMessagesIntervalRange": [10, 201],
+            "time": {{DELAY_1}},
+            "sendMessagesIntervalRangeType": "minutes",
+            "isComercialInterval": false
+          },
+          "sonId": "YtQ2g6dyH3MvSgMoKsTy",
+          "type": { "tag": "delay", "color": "transparent", "icon": "", "id": "delay" },
+          "pos": "{\"x\":663.1634165700873,\"y\":104.31775595818817}"
+        },
+        {
+          "id": "Ej3cCv9sbiv9CVnSGWfF",
+          "message": {
+            "type": "send_message",
+            "ctaUrl": {
+              "campaignId": "",
+              "parameters": {
+                "url": "{{WEBINAR_URL}}",
+                "display_text": "{{CTA_DISPLAY_TEXT}}"
+              },
+              "sonId": "NaijhZuIpGB1qXLpntg2"
+            },
+            "buttonsBodyText": "{{MSG_NAO_ENTROU}}",
+            "messageType": "interactive-message",
+            "interactiveType": "cta-url"
+          },
+          "sonId": "jkUyvEk2Lu8wBhVc9gz9",
+          "pos": "{\"x\":4028.2352000887595,\"y\":136.16572020294478}",
+          "type": { "id": "message", "icon": "", "color": "transparent", "tag": "message" }
+        },
+        {
+          "id": "FCYi2um5oEBt44ibeFcn",
+          "message": {
+            "type": "send_message",
+            "ctaUrl": {
+              "sonId": "n9g6TGlFERkVfvRVV5wH",
+              "campaignId": "",
+              "parameters": {
+                "url": "{{WEBINAR_URL}}",
+                "display_text": "{{CTA_DISPLAY_TEXT}}"
+              }
+            },
+            "buttonsBodyText": "{{MSG_AO_VIVO}}",
+            "messageType": "interactive-message",
+            "interactiveType": "cta-url"
+          },
+          "sonId": "LQqvwRROnvOtqM01EjFu",
+          "type": { "tag": "message", "color": "transparent", "icon": "", "id": "message" },
+          "pos": "{\"x\":3019.430080054475,\"y\":-213.9618087894093}"
+        },
+        {
+          "type": { "id": "conditionalV2", "icon": "", "color": "transparent", "tag": "conditionalV2" },
+          "pos": "{\"x\":3351.215308331325,\"y\":136.05383665686293}",
+          "id": "LQqvwRROnvOtqM01EjFu",
+          "conditionalV2": {
+            "groupConditions": [
+              {
+                "conditionType": "and",
+                "sonId": "MbpgepxwHFQmGprFzMdj",
+                "conditions": [
+                  { "type": "not-contains-every-tag", "tags": ["{{TAG_ACESSO}}"] }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "MbpgepxwHFQmGprFzMdj",
+          "delay": {
+            "time": {{DELAY_REFORCO}},
+            "type": "minutes",
+            "sendMessagesIntervalRange": [10, 201],
+            "isComercialInterval": false,
+            "sendMessagesIntervalRangeType": "minutes"
+          },
+          "sonId": "Ej3cCv9sbiv9CVnSGWfF",
+          "pos": "{\"x\":3690.913564424285,\"y\":140.0162358833041}",
+          "type": { "id": "delay", "icon": "", "tag": "delay", "color": "transparent" }
+        },
+        {
+          "conditionalV2": {
+            "groupConditions": [
+              {
+                "name": "Grupo de condições",
+                "conditionType": "or",
+                "sonId": "0rHsLbeLdIhawXjCycbr",
+                "conditions": [
+                  { "tags": ["{{TAG_ACESSO}}"], "type": "not-contains-every-tag" }
+                ]
+              }
+            ]
+          },
+          "id": "NDJpnMZF3RDZ4hazgs5a",
+          "type": { "id": "conditionalV2", "icon": "", "color": "transparent", "tag": "conditionalV2" },
+          "pos": "{\"x\":4710.362446957162,\"y\":252.95719945306183}"
+        },
+        {
+          "id": "NJMOavAR7ZCPvL0PbBvu",
+          "type": { "tag": "action", "color": "transparent", "icon": "", "id": "action" },
+          "pos": "{\"x\":5265.383379229887,\"y\":-313.7085318066945}",
+          "action": {
+            "forceAttribution": false,
+            "keepChatActive": false,
+            "unniiaAtributionOnly": false,
+            "userResourceGroupSendRandomic": false,
+            "type": "remove_tag",
+            "tags": ["{{FLOW_TAG}}"]
+          }
+        },
+        {
+          "id": "NaijhZuIpGB1qXLpntg2",
+          "type": { "id": "action", "icon": "", "color": "transparent", "tag": "action" },
+          "pos": "{\"x\":4394.607579285489,\"y\":-144.83480183800103}",
+          "sonId": "mAzCKBGVJtCS3AWMOeY4",
+          "action": {
+            "keepChatActive": false,
+            "unniiaAtributionOnly": false,
+            "userResourceGroupSendRandomic": false,
+            "type": "add_tag",
+            "forceAttribution": false,
+            "tags": ["{{TAG_ACESSO}}"]
+          }
+        },
+        {
+          "sonId": "ZrGLUaKmgL17Cuk5h0eO",
+          "pos": "{\"x\":1582.0818357157639,\"y\":-236.95200728803573}",
+          "type": { "id": "message", "icon": "", "color": "transparent", "tag": "message" },
+          "message": {
+            "messageType": "message-media",
+            "type": "send_message",
+            "file": {
+              "mimeType": "image/jpeg",
+              "uploadedFile": {
+                "contentType": "image/jpeg",
+                "size": 0,
+                "url": "{{IMAGE_1_URL}}",
+                "name": "{{IMAGE_1_NAME}}",
+                "extension": "jpeg"
+              },
+              "originalName": "{{IMAGE_1_NAME}}",
+              "caption": ""
+            }
+          },
+          "sequential": true,
+          "id": "TVi6qniZQPvKiQ95aEYr"
+        },
+        {
+          "id": "VyvXVkDMObvo3uexhDIB",
+          "pos": "{\"x\":5377.447293321386,\"y\":218.9018169059392}",
+          "type": { "color": "transparent", "tag": "action", "icon": "", "id": "action" },
+          "action": {
+            "keepChatActive": false,
+            "unniiaAtributionOnly": false,
+            "forceAttribution": false,
+            "type": "add_tag",
+            "userResourceGroupSendRandomic": false,
+            "tags": ["{{TAG_NAO_ENTROU}}"]
+          }
+        },
+        {
+          "id": "YtQ2g6dyH3MvSgMoKsTy",
+          "message": {
+            "message": "{{MSG_DEPOIMENTO}}",
+            "type": "send_message",
+            "messageType": "message-text"
+          },
+          "pos": "{\"x\":965.2738317136541,\"y\":-221.79261674721144}",
+          "type": { "icon": "", "id": "message", "tag": "message", "color": "transparent" },
+          "sonId": "BXhgwH5eKDDrjgKax38J"
+        },
+        {
+          "sequential": true,
+          "message": {
+            "messageType": "message-media",
+            "type": "send_message",
+            "file": {
+              "mimeType": "image/jpeg",
+              "originalName": "{{IMAGE_2_NAME}}",
+              "uploadedFile": {
+                "size": 0,
+                "contentType": "image/jpeg",
+                "name": "{{IMAGE_2_NAME}}",
+                "url": "{{IMAGE_2_URL}}",
+                "extension": "jpeg"
+              },
+              "caption": ""
+            }
+          },
+          "type": { "id": "message", "icon": "", "tag": "message", "color": "transparent" },
+          "pos": "{\"x\":1577.0499422610294,\"y\":-236.95200728803582}",
+          "sonId": "3230WLODNyNZgUbHN1c8",
+          "id": "ZrGLUaKmgL17Cuk5h0eO"
+        },
+        {
+          "action": {
+            "keepChatActive": false,
+            "unniiaAtributionOnly": false,
+            "userResourceGroupSendRandomic": false,
+            "type": "add_tag",
+            "forceAttribution": false,
+            "tags": ["{{TAG_CONFIRMOU}}"]
+          },
+          "pos": "{\"x\":656.7924361718754,\"y\":-215.43577743395505}",
+          "type": { "id": "action", "icon": "", "color": "transparent", "tag": "action" },
+          "id": "d82a43LaiwLlSjzDBfss"
+        },
+        {
+          "sonId": "4GtujYT0JpOkscqBRqRv",
+          "type": { "icon": "", "id": "message", "color": "transparent", "tag": "message" },
+          "pos": "{\"x\":965.2738317136541,\"y\":-221.79261674721144}",
+          "message": {
+            "type": "send_message",
+            "messageType": "message-media",
+            "file": {
+              "caption": "",
+              "uploadedFile": {
+                "extension": "mp4",
+                "url": "{{VIDEO_2_URL}}",
+                "name": "{{VIDEO_2_NAME}}",
+                "contentType": "video/mp4",
+                "size": 0
+              },
+              "originalName": "{{VIDEO_2_NAME}}",
+              "mimeType": "video/mp4"
+            }
+          },
+          "sequential": true,
+          "id": "f83TiPHy2cffwewn2ibp"
+        },
+        {
+          "sonId": "FCYi2um5oEBt44ibeFcn",
+          "pos": "{\"x\":2647.9910388338985,\"y\":-197.24166442677182}",
+          "type": { "id": "delay", "icon": "", "tag": "delay", "color": "transparent" },
+          "id": "fNz7ziYjKonLTVCuXFWb",
+          "delay": {
+            "sendMessagesIntervalRangeType": "minutes",
+            "isComercialInterval": false,
+            "type": "minutes",
+            "sendMessagesIntervalRange": [10, 201],
+            "time": {{DELAY_4}}
+          }
+        },
+        {
+          "id": "jkUyvEk2Lu8wBhVc9gz9",
+          "delay": {
+            "time": {{DELAY_FINAL}},
+            "type": "{{DELAY_FINAL_TYPE}}",
+            "sendMessagesIntervalRange": [10, 201],
+            "isComercialInterval": false,
+            "sendMessagesIntervalRangeType": "minutes"
+          },
+          "sonId": "NDJpnMZF3RDZ4hazgs5a",
+          "pos": "{\"x\":4379.8249104703855,\"y\":256.9637150468409}",
+          "type": { "id": "delay", "icon": "", "color": "transparent", "tag": "delay" }
+        },
+        {
+          "conditionalV2": {
+            "groupConditions": [
+              {
+                "name": "Grupo de condições",
+                "sonId": "NJMOavAR7ZCPvL0PbBvu",
+                "conditionType": "or",
+                "conditions": [
+                  { "type": "contains-some-tag", "tags": ["{{TAG_ACESSO}}"] }
+                ]
+              }
+            ]
+          },
+          "type": { "id": "conditionalV2", "icon": "", "color": "transparent", "tag": "conditionalV2" },
+          "pos": "{\"x\":4754.303427952733,\"y\":-444.6898527387551}",
+          "id": "mAzCKBGVJtCS3AWMOeY4"
+        },
+        {
+          "pos": "{\"x\":4343.308171193578,\"y\":-453.4199971275028}",
+          "type": { "icon": "", "id": "action", "tag": "action", "color": "transparent" },
+          "sonId": "mAzCKBGVJtCS3AWMOeY4",
+          "action": {
+            "unniiaAtributionOnly": false,
+            "type": "add_tag",
+            "userResourceGroupSendRandomic": false,
+            "keepChatActive": false,
+            "forceAttribution": false,
+            "tags": ["{{TAG_ACESSO}}"]
+          },
+          "id": "n9g6TGlFERkVfvRVV5wH"
+        },
+        {
+          "pos": "{\"x\":1577.0499422610294,\"y\":-236.95200728803582}",
+          "type": { "tag": "message", "color": "transparent", "icon": "", "id": "message" },
+          "sonId": "TVi6qniZQPvKiQ95aEYr",
+          "id": "qF3uI6NMkstr3cNazD5T",
+          "message": {
+            "messageType": "message-text",
+            "type": "send_message",
+            "message": "{{MSG_1HORA}}"
+          }
+        },
+        {
+          "pos": "{\"x\":367.48184518838093,\"y\":-215.684429508478}",
+          "type": { "icon": "message", "id": "message", "color": "#00C877", "tag": "message" },
+          "sonId": "EDZutGorerkmenEYquDv",
+          "id": "t1CWLWmpzz46yR2N3ULp",
+          "message": {
+            "interactiveType": "reply-button",
+            "type": "send_message",
+            "buttons": [
+              {
+                "type": "reply",
+                "sonId": "d82a43LaiwLlSjzDBfss",
+                "reply": {
+                  "title": "{{BUTTON_CONFIRM_TEXT}}",
+                  "id": "Zntq1tkqTNvzAjssQViV"
+                }
+              }
+            ],
+            "buttonsBodyText": "{{MSG_ABERTURA}}",
+            "messageType": "interactive-message"
+          }
+        }
+      ]
+    },
+    "customFieldsToCreate": {}
+  }
+}
