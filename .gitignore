@@ -1,0 +1,21 @@
+
+# --- backup-mac 23/11/2026: nunca subir ---
+node_modules/
+.next/
+.turbo/
+.vercel/
+.venv/
+venv/
+__pycache__/
+.DS_Store
+.env
+.env.*
+!.env.example
+!.env*.example
+!.env.sample
+*SEGREDOS*
+.webhook-secret.txt
+*.pem
+*.p12
+.claude/settings.local.json
+.claude/worktrees/
